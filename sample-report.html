@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Accessibility report – SAMPLE – W3C&#39;s intentionally inaccessible demo site</title>
+<style>
+:root{--ink:#14213d;--mut:#5b6476;--line:#e3e6ec;--acc:#0b6e4f;--bg:#fff}
+*{box-sizing:border-box}body{font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);margin:0;padding:32px;max-width:900px;margin:auto}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 10px;border-bottom:2px solid var(--line);padding-bottom:6px}h3{font-size:16px;margin:0 0 4px}
+.brand{color:var(--acc);font-weight:700;letter-spacing:.02em;font-size:13px;text-transform:uppercase}
+.sub{color:var(--mut)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px}.card b{display:block;font-size:24px}
+.issue{border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;page-break-inside:avoid}
+.meta{color:var(--mut);font-size:13px;margin:0 0 8px}pre{background:#f5f6f8;padding:8px;border-radius:6px;white-space:pre-wrap;word-break:break-all;font-size:12px;margin:4px 0 8px}
+code{font-size:12px;background:#f5f6f8;padding:1px 4px;border-radius:4px;word-break:break-all}.ex .url{font-size:12px;color:var(--mut)}
+.b{font-size:11px;padding:2px 7px;border-radius:10px;vertical-align:middle;text-transform:uppercase;font-weight:700}
+.b-critical{background:#fde2e1;color:#9b1c1c}.b-serious{background:#ffedd5;color:#9a3412}.b-moderate{background:#fef9c3;color:#854d0e}.b-minor{background:#e0f2fe;color:#075985}
+.note{background:#f3f7f5;border-left:4px solid var(--acc);padding:10px 14px;border-radius:4px}
+table{border-collapse:collapse;width:100%;font-size:13px}td,th{border-bottom:1px solid var(--line);padding:6px;text-align:left;vertical-align:top}
+a{color:#1d4ed8}summary{cursor:pointer;color:var(--mut);font-size:13px}
+@media print{body{padding:0}details{display:block}}
+</style></head><body>
+<div class="brand">Fixlane Accessibility Reports</div>
+<h1>Website accessibility report</h1>
+<p class="sub">SAMPLE – W3C&#39;s intentionally inaccessible demo site · <a href="https://www.w3.org/WAI/demos/bad/before/home.html">https://www.w3.org/WAI/demos/bad/before/home.html</a> · 2026-11-05 · 1 page checked against WCAG 2.2 Level AA</p>
+
+<div class="grid">
+<div class="card"><b>6</b>types of WCAG issue</div>
+<div class="card"><b>46</b>affected elements</div>
+<div class="card"><b>46</b>critical/serious elements</div>
+<div class="card"><b>Yes</b>skip-to-content link</div>
+</div>
+
+<p class="note"><b>How to use this report.</b> Issues are ordered by impact: fix from the top down. Each one says who is affected, how to fix it, and shows real elements from your site so a developer can find them fast. Most fixes are small theme or content edits.</p>
+
+<h2>Priority fixes (WCAG 2.2 AA)</h2>
+<section class="issue">
+      <h3>1. Images must have alternative text <span class="b b-critical">critical</span></h3>
+      <p class="meta">33 elements on 1 page · WCAG 1.1.1 · rule <code>image-alt</code></p>
+      <p><b>Who this affects:</b> Blind users with screen readers hear nothing (or the file name) instead of what the image shows.</p>
+      <p><b>How to fix:</b> Add an alt attribute describing the image, e.g. &lt;img src=&quot;team.jpg&quot; alt=&quot;Our four dentists in the clinic lobby&quot;&gt;. Decorative images get alt=&quot;&quot;. <a href="https://dequeuniversity.com/rules/axe/4.14/image-alt?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Examples found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>img[src$=&quot;border_left_top.gif&quot;]</code></div><pre>&lt;img src=&quot;./img/border_left_top.gif&quot; width=&quot;10px&quot; height=&quot;10px&quot;&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>img[src$=&quot;border_top.gif&quot;]</code></div><pre>&lt;img src=&quot;./img/border_top.gif&quot; height=&quot;10px&quot;&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>img[src$=&quot;border_right_top.gif&quot;]</code></div><pre>&lt;img src=&quot;./img/border_right_top.gif&quot; width=&quot;10px&quot; height=&quot;10px&quot;&gt;</pre></div>
+      </details></section><section class="issue">
+      <h3>2. Select element must have an accessible name <span class="b b-critical">critical</span></h3>
+      <p class="meta">1 element on 1 page · WCAG 4.1.2 · rule <code>select-name</code></p>
+      <p><b>Who this affects:</b> Dropdowns with no label are unusable for screen reader users.</p>
+      <p><b>How to fix:</b> Add a &lt;label&gt; connected to the &lt;select&gt;, or aria-label. <a href="https://dequeuniversity.com/rules/axe/4.14/select-name?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Example found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>select</code></div><pre>&lt;select onchange=&quot;location.href = this.value;&quot;&gt;</pre></div>
+      </details></section><section class="issue">
+      <h3>3. Links must have discernible text <span class="b b-serious">serious</span></h3>
+      <p class="meta">7 elements on 1 page · WCAG 2.4.4, 4.1.2 · rule <code>link-name</code></p>
+      <p><b>Who this affects:</b> Screen reader users hear &quot;link&quot; with no idea where it goes. Very common on icon-only links (social icons, logos).</p>
+      <p><b>How to fix:</b> Give the link visible text, or add aria-label=&quot;Visit our Instagram&quot; to icon links. <a href="https://dequeuniversity.com/rules/axe/4.14/link-name?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Examples found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>#home &gt; a[onfocus=&quot;blur();&quot;]</code></div><pre>&lt;a href=&quot;javascript:location.href=&#39;home.html&#39;;&quot; onfocus=&quot;blur();&quot;&gt;&lt;img name=&quot;nav_home&quot; src=&quot;./img/nav_home.gif&quot; width=&quot;88&quot; height=&quot;27&quot; hspace=&quot;15&quot; border=&quot;0px&quot;&gt;&lt;/a&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>#news &gt; a[onfocus=&quot;blur();&quot;]</code></div><pre>&lt;a href=&quot;javascript:location.href=&#39;news.html&#39;;&quot; onfocus=&quot;blur();&quot;&gt;&lt;img src=&quot;./img/nav_news.gif&quot; name=&quot;nav_news&quot; width=&quot;90&quot; height=&quot;21&quot; hspace=&quot;12&quot; border=&quot;0px&quot;&gt;&lt;/a&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>#tickets &gt; a[onfocus=&quot;blur();&quot;]</code></div><pre>&lt;a href=&quot;javascript:location.href=&#39;tickets.html&#39;;&quot; onfocus=&quot;blur();&quot;&gt;&lt;img name=&quot;nav_facts&quot; src=&quot;./img/nav_facts.gif&quot; width=&quot;105&quot; height=&quot;23&quot; hspace=&quot;9&quot; border=&quot;0px&quot;&gt;&lt;/a&gt;</pre></div>
+      </details></section><section class="issue">
+      <h3>4. Elements must meet minimum color contrast ratio thresholds <span class="b b-serious">serious</span></h3>
+      <p class="meta">2 elements on 1 page · WCAG 1.4.3 · rule <code>color-contrast</code></p>
+      <p><b>Who this affects:</b> People with low vision or colour blindness, and anyone reading on a phone in sunlight.</p>
+      <p><b>How to fix:</b> Darken the text or lighten the background until the contrast ratio is at least 4.5:1 (3:1 for large text). Check the colours in your theme settings or CSS. <a href="https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Examples found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>tr[height=&quot;25px&quot;]:nth-child(2) &gt; td[bgcolor=&quot;#A9B8BF&quot;][width=&quot;150px&quot;] &gt; font[color=&quot;#41545D&quot;][size=&quot;2&quot;] &gt; b</code></div><pre>&lt;b&gt;Free Penguins&lt;/b&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>tr[height=&quot;25px&quot;]:nth-child(7) &gt; td[bgcolor=&quot;#A9B8BF&quot;][width=&quot;150px&quot;] &gt; font[color=&quot;#41545D&quot;][size=&quot;2&quot;] &gt; b</code></div><pre>&lt;b&gt;More City Parks&lt;/b&gt;</pre></div>
+      </details></section><section class="issue">
+      <h3>5. All touch targets must be 24px large, or leave sufficient space <span class="b b-serious">serious</span></h3>
+      <p class="meta">2 elements on 1 page · WCAG 2.5.8 · rule <code>target-size</code></p>
+      <p><b>Who this affects:</b> People with tremors or limited dexterity, and most phone users, mis-tap small controls.</p>
+      <p><b>How to fix:</b> Make tap targets at least 24x24 CSS pixels, or space them out. <a href="https://dequeuniversity.com/rules/axe/4.14/target-size?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Examples found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>.inaccessible &gt; .report[href$=&quot;home.html&quot;]</code></div><pre>&lt;a href=&quot;./reports/home.html&quot; class=&quot;report&quot;&gt;&lt;span class=&quot;hidden&quot;&gt;Inaccessible Home Page &lt;/span&gt; Report&lt;/a&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>.accessible &gt; .report[href$=&quot;home.html&quot;]</code></div><pre>&lt;a href=&quot;../after/reports/home.html&quot; class=&quot;report&quot;&gt;&lt;span class=&quot;hidden&quot;&gt;Accessible Home Page &lt;/span&gt; Report&lt;/a&gt;</pre></div>
+      </details></section><section class="issue">
+      <h3>6. &lt;html&gt; element must have a lang attribute <span class="b b-serious">serious</span></h3>
+      <p class="meta">1 element on 1 page · WCAG 3.1.1 · rule <code>html-has-lang</code></p>
+      <p><b>Who this affects:</b> Screen readers may read the page in the wrong accent or language.</p>
+      <p><b>How to fix:</b> Add lang=&quot;en&quot; to the &lt;html&gt; tag (usually one setting in your theme or CMS). <a href="https://dequeuniversity.com/rules/axe/4.14/html-has-lang?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Example found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>html</code></div><pre>&lt;html&gt;</pre></div>
+      </details></section>
+
+<h2>Keyboard check (homepage)</h2>
+<table>
+<tr><th>Check</th><th>Result</th></tr>
+<tr><td>Skip-to-content link as first stop</td><td>Present</td></tr>
+<tr><td>Keyboard trap in first 40 tab presses</td><td>None detected</td></tr>
+<tr><td>Focused elements with no visible focus style</td><td>All checked tab stops showed a focus style</td></tr>
+</table><p class="sub" style="font-size:13px">Automated heuristic: focus styles made with colour or underline changes alone are not detected, so confirm flagged items by tabbing through the page yourself.</p>
+
+
+
+<h2>Recommended improvements (best practice)</h2><p class="sub">Not strict WCAG failures, but they make the site noticeably easier to use with assistive technology.</p><section class="issue">
+      <h3>1. All page content should be contained by landmarks <span class="b b-moderate">moderate</span></h3>
+      <p class="meta">22 elements on 1 page · Best practice · rule <code>region</code></p>
+      <p><b>Who this affects:</b> Content outside landmarks is harder to find with a screen reader.</p>
+      <p><b>How to fix:</b> Place content inside &lt;header&gt;, &lt;nav&gt;, &lt;main&gt; and &lt;footer&gt; elements. <a href="https://dequeuniversity.com/rules/axe/4.14/region?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Examples found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>#logos</code></div><pre>&lt;p id=&quot;logos&quot;&gt;&lt;a href=&quot;https://www.w3.org/&quot; title=&quot;W3C Home&quot;&gt;&lt;img alt=&quot;W3C logo&quot; src=&quot;../img/w3c.png&quot; height=&quot;48&quot; width=&quot;72&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.w3.org/WAI/&quot; title=&quot;WAI Home&quot;&gt;&lt;img alt=&quot;Web Accessibility Initiative (WAI) logo&quot; src=&quot;../img/wai.png&quot; height=&quot;48&quot;&gt;&lt;/a&gt;&lt;/p&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>h1</code></div><pre>&lt;h1&gt;&lt;span class=&quot;subhead&quot;&gt;Inaccessible Home Page&lt;/span&gt;&lt;span class=&quot;hidden&quot;&gt; -&lt;/span&gt; Before and After Demonstration&lt;/h1&gt;</pre></div><div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>.subline</code></div><pre>&lt;p class=&quot;subline&quot;&gt;Improving a Web site using Web Content Accessibility Guidelines (WCAG) 2.0&lt;/p&gt;</pre></div>
+      </details></section><section class="issue">
+      <h3>2. Document should have one main landmark <span class="b b-moderate">moderate</span></h3>
+      <p class="meta">1 element on 1 page · Best practice · rule <code>landmark-one-main</code></p>
+      <p><b>Who this affects:</b> Screen reader users cannot jump straight to the main content.</p>
+      <p><b>How to fix:</b> Wrap the main content in a &lt;main&gt; element. <a href="https://dequeuniversity.com/rules/axe/4.14/landmark-one-main?application=axeAPI">Technical reference</a></p>
+      <details open><summary>Example found</summary>
+      <div class="ex"><div class="url">https://www.w3.org/WAI/demos/bad/before/home.html</div><div><b>Element:</b> <code>html</code></div><pre>&lt;html&gt;</pre></div>
+      </details></section>
+
+<h2>Pages checked</h2>
+<table><tr><th>#</th><th>Page</th></tr><tr><td>1</td><td>Welcome to CityLights! [Inaccessible Home Page]<br><span class="sub">https://www.w3.org/WAI/demos/bad/before/home.html</span></td></tr></table>
+
+<h2>What this report does and does not cover</h2>
+<p>This report combines automated testing with the open-source axe-core engine (the same engine used by Google Lighthouse and many professional tools) and an automated keyboard walk-through. Automated testing finds a large share of common issues; Deque, the maker of axe-core, reported that it identified about 57% of issues by volume across 2,000+ audits. It cannot judge everything: whether alt text is accurate, whether captions are correct, whether content makes sense with a screen reader, and some keyboard and timing behaviour need a human tester.</p>
+<p><b>This report is not a legal opinion or a certification of ADA or WCAG compliance</b>, and fixing these items does not guarantee that a business will not receive a demand letter or lawsuit. If you have received a legal notice, speak with an attorney. We do not sell or recommend accessibility overlay widgets; fixing the underlying website is the reliable approach.</p>
+<p class="sub">Prepared by Fixlane Accessibility Reports on 2026-11-05.</p>
+</body></html>

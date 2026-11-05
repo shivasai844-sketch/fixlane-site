@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixlane – Plain-English website accessibility reports</title>
+<meta name="description" content="Fixed-price WCAG 2.2 AA accessibility reports for small business websites and the agencies that build them. Prioritized, plain-English fixes your developer can act on. No overlays.">
+<style>
+:root{--ink:#14213d;--mut:#55607a;--line:#e3e6ec;--acc:#0b6e4f;--acc2:#e8f3ef;--bg:#ffffff;--soft:#f7f8fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:#1d4ed8}a:focus-visible,button:focus-visible{outline:3px solid #1d4ed8;outline-offset:3px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:12px;background:#fff;padding:8px 12px;z-index:9}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none}.logo span{color:var(--acc)}
+nav a{margin-left:20px;color:var(--ink);text-decoration:none;font-size:15px}nav a:hover{text-decoration:underline}
+.hero{padding:72px 0 56px;background:linear-gradient(180deg,var(--acc2),#fff)}
+h1{font-size:44px;line-height:1.15;margin:0 0 18px;max-width:780px}h2{font-size:30px;margin:0 0 14px}h3{margin:0 0 8px;font-size:19px}
+.lead{font-size:20px;color:var(--mut);max-width:700px}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:600;margin:8px 10px 0 0}
+.btn.alt{background:#fff;color:var(--acc);border:2px solid var(--acc)}
+section{padding:60px 0}section.soft{background:var(--soft)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+.price{font-size:38px;font-weight:800;margin:6px 0}.price small{font-size:15px;color:var(--mut);font-weight:400}
+.card ul{padding-left:20px;margin:12px 0}.feat{border:2px solid var(--acc)}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--acc);background:var(--acc2);padding:3px 9px;border-radius:12px;text-transform:uppercase;letter-spacing:.04em}
+.stat{font-size:34px;font-weight:800;color:var(--acc)}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-weight:600}
+.small{font-size:14px;color:var(--mut)}
+footer{padding:36px 0;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+@media (max-width:820px){h1{font-size:32px}.grid3,.grid2{grid-template-columns:1fr}nav a{margin-left:12px}.hide-m{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><div class="wrap">
+  <a class="logo" href="#">fix<span>lane</span></a>
+  <nav aria-label="Main"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a class="hide-m" href="#agencies">For agencies</a><a href="#faq">FAQ</a></nav>
+</div></header>
+
+<main id="main">
+<div class="hero"><div class="wrap">
+  <span class="tag">WCAG 2.2 AA · fixed price · no overlays</span>
+  <h1>Find out what's blocking disabled visitors on your website, and exactly how to fix it.</h1>
+  <p class="lead">A plain-English accessibility report for small business websites. Every issue says who it affects, how to fix it, and where it is on your site, ordered so the most important fixes come first.</p>
+  <a class="btn" href="#free">Get a free homepage snapshot</a>
+  <a class="btn alt" href="sample-report.html">See a sample report</a>
+</div></div>
+
+<section><div class="wrap grid3">
+  <div><div class="stat">3,117</div><p>federal website accessibility lawsuits in 2025, up 27% on 2024 <span class="small">(Seyfarth Shaw)</span>.</p></div>
+  <div><div class="stat">No exemption</div><p>The ADA has no small-business exemption for websites, and ecommerce and local businesses are frequent targets.</p></div>
+  <div><div class="stat">$1,000+</div><p>is where published prices for a manual small-site audit usually start. Free scanners are cheap but give you raw technical output.</p></div>
+</div></section>
+
+<section class="soft" id="how"><div class="wrap">
+  <h2>How it works</h2>
+  <div class="grid3">
+    <div class="card"><h3>1. Send your website</h3><p>Tell us the site and up to 15 key pages (home, services, contact, booking, checkout). No logins or plugins needed.</p></div>
+    <div class="card"><h3>2. We test it</h3><p>Automated WCAG 2.2 AA testing with the open-source axe-core engine on every page, plus a keyboard walk-through and alt-text review.</p></div>
+    <div class="card"><h3>3. You get a fix list</h3><p>A PDF and web report within 2 business days, ordered by impact, with code examples. After you fix things, we re-test for free.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>Simple, fixed pricing</h2>
+  <p class="lead">Order by email and pay with a secure PayPal invoice. No subscriptions required.</p>
+  <div class="grid3" style="margin-top:22px">
+    <div class="card" id="free">
+      <span class="tag">Free</span><h3>Homepage snapshot</h3><div class="price">$0</div>
+      <ul><li>Your homepage tested against WCAG 2.2 AA</li><li>Top issues in plain English</li><li>Delivered by email</li></ul>
+      <a class="btn alt" href="mailto:fixlane.reports@gmail.com?subject=Free%20snapshot%20request&body=Website%3A%20">Request snapshot</a>
+    </div>
+    <div class="card feat">
+      <span class="tag">Most popular</span><h3>Site report</h3><div class="price">$149 <small>one-time</small></div>
+      <ul><li>Up to 15 pages</li><li>Every issue prioritized, with who it affects and how to fix it</li><li>Keyboard and alt-text review</li><li>PDF + web report in 2 business days</li><li>Free re-test within 30 days</li></ul>
+      <a class="btn" href="mailto:fixlane.reports@gmail.com?subject=Order%3A%20Site%20report%20(%24149)&body=Website%3A%20%0APages%20to%20include%20(optional)%3A%20%0A%0AWe%27ll%20reply%20with%20a%20secure%20PayPal%20invoice.">Order site report</a>
+    </div>
+    <div class="card" id="agencies">
+      <span class="tag">For agencies</span><h3>White-label 5-pack</h3><div class="price">$499 <small>($100/report)</small></div>
+      <ul><li>5 site reports, use within 6 months</li><li>Your agency name on every report</li><li>Free re-test for each site</li><li>Resell, or use to win remediation work</li></ul>
+      <a class="btn alt" href="mailto:fixlane.reports@gmail.com?subject=Order%3A%20Agency%205-pack%20(%24499)&body=Agency%20name%3A%20%0AFirst%20client%20site%20(optional)%3A%20%0A%0AWe%27ll%20reply%20with%20a%20secure%20PayPal%20invoice.">Order 5-pack</a>
+    </div>
+  </div>
+  <p class="small" style="margin-top:16px">Not happy with your report? Ask within 14 days for a full refund. If we miss the delivery date by more than 3 business days, you are refunded automatically.</p>
+</div></section>
+
+<section class="soft"><div class="wrap grid2">
+  <div><h2>Why not just install an overlay widget?</h2>
+  <p>Overlay widgets promise one-line compliance. In 2025 the FTC ordered the best-known overlay vendor to pay $1 million over claims its tool made sites compliant, and businesses using overlays have continued to be sued. Fixing the website itself is the reliable approach, and most fixes are small theme or content edits.</p></div>
+  <div><h2>Why not a free scanner?</h2>
+  <p>Free tools are great if you're a developer. Most business owners get a wall of rule IDs. Fixlane turns the same kind of test results into a short, ordered to-do list: who is affected, what to change, and where, so you or your web person can act on it in an afternoon.</p></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <details><summary>Will this make my website "ADA compliant"?</summary><p>No honest provider can promise that from a report. This report finds and explains issues so they can be fixed. It is not a legal opinion or a certification, and it doesn't guarantee you won't receive a demand letter. If you've received a legal notice, talk to an attorney.</p></details>
+  <details><summary>What does automated testing miss?</summary><p>Automated testing finds a large share of common problems. Deque, which makes axe-core, reported that it caught about 57% of issues by volume across 2,000+ audits. It can't judge whether image descriptions are accurate or whether a screen reader user can complete a complex task. Every report says what was and wasn't tested.</p></details>
+  <details><summary>Who prepares the reports?</summary><p>Fixlane is an AI-run business. Testing uses open-source tools, and the explanations are written and checked with AI assistance. A person oversees the business and reads every message.</p></details>
+  <details><summary>Do you fix the issues too?</summary><p>Not yet. The report is written so your developer, your agency or you can make the fixes. Then we re-test for free.</p></details>
+  <details><summary>Do you need access to my website?</summary><p>No. We test the public pages like a visitor would. Pages behind a login can be added on request with a test account.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Fixlane Accessibility Reports · fixlane.reports@gmail.com</p>
+  <p>Fixlane reports are informational and are not legal advice. WCAG is a standard of the W3C. axe-core is an open-source project by Deque Systems; Fixlane is not affiliated with W3C or Deque.</p>
+</div></footer>
+</body>
+</html>
